@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your train, bus, flight and hotel journey with R.C Tours & Travels.">
+  <title>R.C Tours & Travels | Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="top-header">
+    <a href="index.html" class="logo">
+            <img src="images/logo.png.png"
+                 alt="R.C Tours & Travels Logo" width="50" height="50">
+            <span>Your Journey, Our Commitment</span></a>
+    <div class="navbar-time"><i class="fa-regular fa-clock"></i><span id="currentDateTime"></span></div>
+    <div class="accessibility-controls" aria-label="Text size controls">
+      <button type="button" id="zoomIn" aria-label="Increase text size">A+</button>
+      <button type="button" id="resetZoom" aria-label="Reset text size">A</button>
+      <button type="button" id="zoomOut" aria-label="Decrease text size">A-</button>
+    </div>
+    <a class="button button-small" href="contact.html">Login / Register</a>
+  </div>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="active" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="trains.html"><i class="fa-solid fa-train"></i> Trains</a>
+    <a href="flights.html"><i class="fa-solid fa-plane"></i> Flights</a>
+    <a href="buses.html"><i class="fa-solid fa-bus"></i> Bus</a>
+    <a href="hotels.html"><i class="fa-solid fa-hotel"></i> Hotels</a>
+    <a href="offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+    <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">EXPLORE · TRAVEL · DISCOVER</p>
+      <h1>Your Journey<br><span>Starts Here</span></h1>
+      <p>Explore travel options for trains, buses, flights and hotels in one convenient place.</p>
+      <a href="#booking" class="button">Plan your journey <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section class="booking-section section-wrap" id="booking">
+    <div class="booking-card">
+      <div class="section-heading left">
+        <p class="eyebrow">START PLANNING</p>
+        <h2>Book Your Journey</h2>
+        <p>Choose a service and enter your trip details.</p>
+      </div>
+      <div class="booking-tabs" role="tablist" aria-label="Travel service">
+        <button type="button" class="booking-tab active" data-service="train"><i class="fa-solid fa-train"></i> Train</button>
+        <button type="button" class="booking-tab" data-service="bus"><i class="fa-solid fa-bus"></i> Bus</button>
+        <button type="button" class="booking-tab" data-service="flight"><i class="fa-solid fa-plane"></i> Flight</button>
+        <button type="button" class="booking-tab" data-service="hotel"><i class="fa-solid fa-hotel"></i> Hotel</button>
+      </div>
+      <form id="bookingForm">
+        <div class="form-grid">
+          <div class="form-group" id="fromGroup"><label for="from">From</label><input type="text" id="from" name="from" placeholder="Departure city or station" list="citySuggestions" required></div>
+          <div class="form-group"><label for="to" id="toLabel">To</label><input type="text" id="to" name="to" placeholder="Destination city" list="citySuggestions" required></div>
+          <datalist id="citySuggestions">
+            <option value="Mumbai"><option value="Mumbai Central"><option value="New Delhi"><option value="Delhi"><option value="Pune"><option value="Nashik"><option value="Nagpur"><option value="Bengaluru"><option value="Hyderabad"><option value="Chennai"><option value="Kolkata"><option value="Jaipur"><option value="Ahmedabad"><option value="Goa"><option value="Manali"><option value="Mysore"><option value="Lucknow"><option value="Bhopal"><option value="Surat"><option value="Amritsar">
+          </datalist>
+          <div class="form-group"><label for="JourneyDate" id="dateLabel">Journey Date</label><input type="date" id="JourneyDate" name="date" required></div>
+          <div class="form-group" id="travellersGroup"><label for="travellers" id="travellersLabel">Passengers</label><select id="travellers" name="travellers"><option value="1">1 Passenger</option><option value="2">2 Passengers</option><option value="3">3 Passengers</option><option value="4">4 Passengers</option><option value="5">5 Passengers</option><option value="6">6 Passengers</option></select></div>
+          <div class="form-group" id="returnGroup"><label for="returnDate">Return Date (Optional)</label><input type="date" id="returnDate" name="returnDate"></div>
+        </div>
+        <button type="submit" class="button search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search <span id="searchService">Trains</span></button>
+        <p id="bookingMessage" class="form-status" role="status" aria-live="polite"></p>
+        <p class="disclaimer">Search results are illustrative listings, not live availability or confirmed prices.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section-wrap benefits">
+    <div class="section-heading"><p class="eyebrow">WHY TRAVEL WITH US</p><h2>Plan with confidence</h2><p>A simple interface designed to help you organise your next trip.</p></div>
+    <div class="card-grid three">
+      <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Clear Information</h3><p>Find the trip details you need in one easy-to-use interface.</p></article>
+      <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-headset"></i></div><h3>Travel Support</h3><p>Use our contact page to send an enquiry or ask for assistance.</p></article>
+      <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-route"></i></div><h3>Multiple Services</h3><p>Explore train, bus, flight and hotel travel options in one place.</p></article>
+    </div>
+  </section>
+
+  <section class="promo-band"><div><p class="eyebrow">YOUR NEXT ADVENTURE</p><h2>Make a plan. Find your way.</h2><p>Explore the website and start planning your next journey.</p></div><a href="offers.html" class="button button-light">Explore offers <i class="fa-solid fa-arrow-right"></i></a></section>
+</main>
+<footer class="site-footer"><div class="footer-main"><div><a href="index.html" class="footer-brand">R.C Tours & Travels</a><p>Your Journey, Our Commitment.</p></div><div><h3>Quick links</h3><a href="trains.html">Trains</a><a href="flights.html">Flights</a><a href="buses.html">Bus</a><a href="hotels.html">Hotels</a></div><div><h3>Information</h3><a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="offers.html">Offers</a></div></div><div class="footer-bottom">© <span class="year"></span> R.C Tours & Travels. All rights reserved. <span>Online travel planner — live bookings are not enabled.</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
